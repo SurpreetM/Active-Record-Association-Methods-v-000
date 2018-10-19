@@ -4,7 +4,7 @@ class Artist < ActiveRecord::Base
 
   def get_genre_of_first_song
     id = self.songs.first.genre_id
-    Genres.where("id = ?",id )
+    Genres.name.where("id = ?",id )
   end
 
   def song_count
